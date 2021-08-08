@@ -1,0 +1,54 @@
+
+.sidebar{
+  padding: 32px;
+  width: 20vw;;
+  height: 100vh;
+  background: $background-color;
+  
+  // Tittle Logo
+  h1{
+    @include h1-logo("../images/logo-ANSWER.svg", 150px, 40px);
+  }
+
+  &__content{
+    height: 92%;
+
+    &__nav{
+
+      a:hover{
+        color: $primary-color;
+      }
+
+      li{
+        position: relative;
+      }
+
+      .current{
+        a{
+          color: $primary-color;
+        }
+      }
+
+      .current::before{
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: $primary-color;
+        top: 0;
+        left: -32px;
+      }
+    }
+    
+
+    &__user{
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  
+}
